@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+void findGreatest(int *a ,int *b ,int *c);
+main()
+{
+	int a , b , c;
+	cout <<"\t\t\t" << "-----------< Enter the three numbers >------------" << endl;
+	cin >> a >> b >> c;
+	
+	findGreatest(&a , &b , &c);
+	
+}
+void findGreatest(int *a ,int *b ,int *c)
+{
+	if(*a > *b)
+	{
+		if(*a > *c)
+			cout << "The Greatest Number is : " << *a;
+		else
+			cout << "The Greatest Number is : " << *c;		
+	}
+	if(*b > *a)
+	{
+		if(*b > *c)
+			cout << "The Greatest Number is : " << *b;
+		else
+			cout << "The Greatest Number is : " << *c;	
+	}
+}
